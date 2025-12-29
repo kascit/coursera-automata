@@ -1,9 +1,11 @@
+> 📦 This repository is archived.  
+> It is kept as a personal learning and experimentation project and is no longer actively developed.
 
 # Coursera Automation — Personal Selenium Learning Project
 
+![Status](https://img.shields.io/badge/Status-Educational-orange)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Selenium](https://img.shields.io/badge/Selenium-4.x-green)
-![Status](https://img.shields.io/badge/Status-Educational-orange)
 
 > [!WARNING]
 > **Important Disclaimer**
@@ -29,7 +31,7 @@ While experimenting with Selenium, I wanted a realistic, stateful, non-trivial w
 * Retry logic and resilience
 * Long-running browser automation
 
-Having **legitimate unlimited access to Coursera via my college**, it became a practical sandbox to:
+Having **legitimate institutional access to Coursera via my college**, it became a practical sandbox to:
 * Explore Selenium deeply.
 * Understand how real production UIs behave.
 * Build something end-to-end instead of toy scripts.
@@ -233,24 +235,27 @@ The script will:
 
 ## 🧠 Automation Flow
 
+> *Note: If the diagram does not render, view this README on GitHub Desktop or github.com.*
 ```mermaid
 graph TD
     A[Start] --> B[Open Coursera]
     B --> C{Login Session Exists?}
     C -- No --> D[Manual Login Required]
     C -- Yes --> E[Navigate to My Learning]
+    D -- After Login --> E
     E --> F{Find Incomplete Course}
     F -- None Found --> Z[End]
     F -- Found --> G[Enter Course]
     G --> H[Module Loop]
     H --> I{Item Type?}
     I -- Video --> J[Watch/Skip]
-    I -- Reading --> K[Mark Complete]
+    I -- Reading/Misc --> K[Mark Complete]
     I -- Quiz --> L["AI Solver (Optional)"]
     J --> M[Next Item]
     K --> M
     L --> M
-    M --> H
+    M -- Item/Module pending --> H
+    M -- Reached Course End --> F
 
 ```
 
@@ -355,3 +360,8 @@ Provided **as-is**, without warranty.
 If you clone or fork this project, expect to modify CSS selectors. Treat this as a **learning artifact**, not a finished product.
 
 Happy hacking.
+
+<br>
+
+> 📦 **Repository archived**  
+> This project is preserved as a personal learning reference and is no longer under active development.
