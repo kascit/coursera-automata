@@ -1,0 +1,19 @@
+[project]
+name = "coursera-automation"
+version = "0.1.0"
+description = "Personal Selenium-based automation for navigating Coursera courses with AI-assisted quiz handling."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+dependencies = [
+  "selenium>=4.16.0",
+  "openai>=1.0.0",
+  "google-generativeai>=0.4.0"
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.black]
+line-length = 100

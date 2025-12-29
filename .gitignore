@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+cours/
+
+# Selenium / browser data
+chrome-profile/
+chromium/
+dhanur/
+ayush/
+
+# API keys / secrets
+api.json
+
+# Logs
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
